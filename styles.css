@@ -1,97 +1,95 @@
 body {
-    background-color: #292828;
+    background-color: #1f1f1f;
     margin: 0;
     padding: 0;
     color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    
 }
 
-#navbar {
-    width: 100vw;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
+#projects {
+    width:100%;
+    height:100vh;
+    background-color: #1f1f1f;
 }
 
+#contact {
+    width: 100%;
+    height: 100vh;
+    background-color: #424242;
+}
 #logo {
+    position: fixed;
     margin: 0.5em;
 }
+
 ul {
     display: flex;
-    list-style-type: none;   
+    list-style-type: none;
+    justify-content: flex-end;  
 }
 
-.navLinks {
-    padding: 0 2em;
-    font-size: 1.5rem;
+#filter {
+    height:90%;
 }
-
-.navLinks:hover {
-    color: #ff00ff;
-    text-decoration: underline;
-    text-decoration-color: rgb(72, 255, 0);
-}
-
-
 .squareContainer {
-    position: relative;
-    max-width: 100vw;
-    max-height: 100vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
+#landingPage {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
 
-
+.squares {
+    position: absolute;
+    opacity: 0.2;
+}
 
 .small {
-    position: absolute;
-    width: 50px;
-    height: 50px;
+    
+    width: 2.5em;
+    height: 2.5em;
     animation-name: movingSquares;  
     animation-iteration-count: infinite;
-    animation-duration: 18s;
-    border: 2px solid palevioletred;   
+    animation-duration: 18s;   
 }
 
 .medium {
-    position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 5em;
+    height: 5em;
     animation-name: movingSquares2;  
     animation-iteration-count: infinite;
-    animation-duration: 24s;
-   
-      
+    animation-duration: 24s;     
 }
 
 .large {
-    
-    position: absolute;
-    width: 200px;
-    height: 200px;
+   
+    width: 10em;
+    height: 10em;
     animation-name: movingSquares3;  
     animation-iteration-count: infinite;
-    animation-duration: 15s;
-    
-    border: 2px solid palevioletred;   
+    animation-duration: 15s;  
 }
 
 .massive {
     
-    position: relative;
-    width: 350px;
-    height: 350px;
+    width: 20em;
+    height: 20em;
     animation-name: movingSquares4;  
     animation-iteration-count: infinite;
-    animation-duration: 30s;
-
-    
-   
+    animation-duration: 30s;   
 }
 
 .order1 {
     top: -100vh;
     left: -50vw;
-    border: 2px solid rgba(51, 255, 0, 0.2); 
+    border: 2px solid #5DE950;
     animation-delay: -2s !important;
 }
 
@@ -99,29 +97,53 @@ ul {
     top: -75vh;
     left: -70vw;
     animation-delay: -12s !important;
-    border: 2px solid rgba(51, 255, 0, 0.2); 
+    border: 2px solid #5DE950; 
 }
 
 .order3 {
     top: -50vh;
     left: -50vw;
     animation-delay: -8s !important;
-    border: 2px solid rgba(51, 255, 0, 0.2);  
+    border: 2px solid #5DE950;  
 }
 
 .order4 {
     top: -25vh;
     left: -100vw;
     animation-delay: -4s !important;
-    border: 2px solid rgba(51, 255, 0, 0.2);  
-    
-    
+    border: 2px solid #5DE950;     
 }
 
+#landingContent {
+    position: absolute;
+    top: -5em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+button {
+    width: 10em;
+    height: 3em;
+    margin: 0em 1.5em;
+    
+    background-color: #171717;
+    border: none;
+    font-size: 1.5em;
+    color: #fff;
+    opacity: 0.5;
+    border-radius: 5px;
+    border: 2px solid #000;
+    transition: all 0.7s;
+}
 
-
-
+button:hover {
+    opacity: 1;
+    border-color: #5DE950;
+}
 
 @keyframes movingSquares {
     from {
@@ -132,6 +154,7 @@ ul {
         
     }
 }
+
 @keyframes movingSquares2 {
     from {
         transform: rotate(inherit);
@@ -141,6 +164,7 @@ ul {
         
     }
 }
+
 @keyframes movingSquares3 {
     from {
         transform: rotate(inherit);
@@ -162,31 +186,94 @@ ul {
 }
 
 #aboutMe {
-   
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(155, 26, 26);
-    
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    width: 100%;
+    height: 100vh;   
 }
 
+
 #introText {
-    position: absolute;
-    font-size: 3rem;
-    top: 30vh;
-    margin-left: 2em;
-    font-family: 'Rokkitt', serif;
-    color: rgb(255, 255, 255);
-    
-    
+    height: 5em;
 }
 
 h1 {
-    width: 100%;
+    font-size: 5em;
+    margin-bottom: -0.2em;
 }
 
-#filter {
-   
-    max-width: 100vw;
-    max-height: 100vh;
-    overflow: hidden;
+h2 {
+    font-size: 3em;
+    height: 3em;
+    margin-bottom: -1em;
 }
+
+#aboutMeContent1, #aboutMeContent2 {
+    width: 40em;
+    height: 20em;
+    background-color: #171717;
+}
+
+#aboutMeContainer {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+#aboutMeContent1 {
+    
+    margin-top: 2em;
+    border-right: 5px solid #5DE950;
+    border-top: 5px solid #5DE950;
+    border-radius: 5px;
+}
+
+#aboutMeContent2 {
+    margin-top: 2em;
+    border-right: 5px solid #5DE950;
+    border-bottom: 5px solid #5DE950;
+    border-radius: 5px;
+}
+#nav1, #nav2 ,#nav3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 1;
+}
+
+#nav1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+#nav2{
+    grid-area: f;
+}
+#nav3{
+
+}
+
+#portraitImg {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    align-self: start;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2em;
+    border-radius: 50%;
+    border: 5px solid #5DE950;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+}
+
+
+.box {
+    font-size: 300px;
+}
+
+

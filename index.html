@@ -12,19 +12,9 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <div id="navbar">
-        <img id="logo" src="/images/logo.svg" alt="logo">
-        <ul>
-            <li class="navLinks">Home</li>
-            <li class="navLinks">About</li>
-            <li class="navLinks">Projects</li>
-            <li class="navLinks">Contact</li>
-        </ul>
-    </div>
-    <div id="landingPage"> 
 
-        
-        <div id="filter">
+    <a href="#landingPage"><img id="logo" src="/images/logo.svg" alt="logo"></a>   
+    <div id="landingPage"> 
     <div class="squareContainer">
     <div class="squares  small order1" id="square1"></div>
     <div class="squares order2 small" id="square2"></div>
@@ -50,14 +40,75 @@
     <div class="squares order2 massive" id="square14"></div>
     <div class="squares order3 massive" id="square15"></div>
     <div class="squares order4 massive" id="square16"></div>
-</div>
-     
-</div>
-</div>
-    <div id="introText">
+</div> 
+
+<div id="landingContent">
+    <div id="introText"></div>
     <h1 id="intro1"></h1>
+    <h2 id="intro2"></h2>
+
+<div id="buttonBox">
+    <a href="#aboutMe"><button>About</button></a>
+    <a href="#projects"><button>Projects</button></a>
+    <a href="#contact"><button>Contact</button></a>
 </div>
 
+</div>
+</div>
+
+<div id="aboutMe">
+    <div id="nav1">
+        <ul>
+            <a class="navLinks" href="#projects"><li><button>Projects</button></li></a>
+            <a class="navLinks" href="#contact"><li><button>Contact</button></li></a>
+        </ul>
+    </div>
+    <div id="portraitImg"></div>
+<div id="aboutMeContainer">
+    <div id="aboutMeContent1">1</div>
+    <div id="aboutMeContent2">2</div>
+</div>
+
+    
+</div>
+
+<div id="projects">
+    <div id="nav2">
+        <ul>
+            <a class="navLinks" href="#aboutMe"><li><button>About</button></li></a>
+            <a class="navLinks" href="#contact"><li><button>Contact</button></li></a>
+        </ul>
+    </div>
+    <div id="project1">
+        <div id="projectBox1"></div>
+        <div id="projectText1"></div>
+    </div>
+        <div id="projectBox2"></div>
+        <div id="projectBox3"></div>
+        
+        <div id="projectText2"></div>
+        <div id="projectText3"></div>
+    
+</div>
+
+<div id="contact">
+    <div id="nav3">
+        <ul>
+            <a class="navLinks" href="#aboutMe"><li><button>About</button></li></a>
+            <a class="navLinks" href="#projects"><li><button>Projects</button></li></a>
+        </ul>
+    </div>
+    <div id="boxGrid">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+</div>
 
 
    <script src="app.js"></script> 

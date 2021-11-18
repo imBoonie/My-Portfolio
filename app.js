@@ -1,11 +1,19 @@
 
-let txt = "Hi, I'm David Jones" /* The text */
+let txt = "Hi, I'm David Jones"
+let txt2 = "A developer from the UK" 
 let speed = 75; /* The speed/duration of the effect in milliseconds */
 
-var i = 0;
+let i = 0;
+let j = 0;
+
+const texts = ["Hii I'm David Jones", "A developer from the UK"]
 
 
-const texts = ["Hi, I'm David Jones", "A developer from the UK"]
+typeWriter();
+
+setTimeout(() => {
+  sloganTyper();
+}, 1500);
 
 function typeWriter() {
   if (i < txt.length) {
@@ -15,4 +23,9 @@ function typeWriter() {
   }
 }
 
-window.onload = typeWriter();
+function sloganTyper() {
+  if (j < txt2.length)
+  document.getElementById("intro2").innerHTML += txt2.charAt(j);
+  j++;
+  setTimeout(sloganTyper, speed);
+}
