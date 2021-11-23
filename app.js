@@ -1,7 +1,7 @@
 
 let txt = "Hi, I'm David Jones"
 let txt2 = "A developer from the UK" 
-let speed = 75; /* The speed/duration of the effect in milliseconds */
+let speed = 85; /* The speed/duration of the effect in milliseconds */
 
 let i = 0;
 let j = 0;

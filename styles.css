@@ -244,7 +244,7 @@ h2 {
 
 #nav1{
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 1;
     grid-column-start: 5;
     grid-column-end: 6;
 }
@@ -276,4 +276,7 @@ h2 {
     font-size: 300px;
 }
 
+.navButton {
+    font-size: 1em;
+}
 
