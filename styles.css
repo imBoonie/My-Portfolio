@@ -20,113 +20,74 @@ body {
     background-color: #424242;
 }
 #logo {
+    height: 3em;
     position: fixed;
     margin: 0.5em;
 }
 
-ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: flex-end;  
-}
-
-#filter {
-    height:90%;
-}
 .squareContainer {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #landingPage {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .squares {
     position: absolute;
     opacity: 0.2;
-}
-
-.small {
-    
-    width: 2.5em;
-    height: 2.5em;
     animation-name: movingSquares;  
     animation-iteration-count: infinite;
     animation-duration: 18s;   
 }
 
-.medium {
-    width: 5em;
-    height: 5em;
-    animation-name: movingSquares2;  
-    animation-iteration-count: infinite;
-    animation-duration: 24s;     
-}
 
-.large {
-   
-    width: 10em;
-    height: 10em;
-    animation-name: movingSquares3;  
-    animation-iteration-count: infinite;
-    animation-duration: 15s;  
-}
-
-.massive {
-    
-    width: 20em;
-    height: 20em;
-    animation-name: movingSquares4;  
-    animation-iteration-count: infinite;
-    animation-duration: 30s;   
-}
 
 .order1 {
     top: -100vh;
-    left: -50vw;
+    left: 100vw;
     border: 2px solid #5DE950;
-    animation-delay: -2s !important;
+    
 }
 
 .order2 {
-    top: -75vh;
-    left: -70vw;
-    animation-delay: -12s !important;
+    top: -100vh;
+    left: 66vw;
+   
     border: 2px solid #5DE950; 
 }
 
 .order3 {
-    top: -50vh;
-    left: -50vw;
-    animation-delay: -8s !important;
+    top: -100vh;
+    left: 33vw;
+    
     border: 2px solid #5DE950;  
 }
 
 .order4 {
-    top: -25vh;
-    left: -100vw;
-    animation-delay: -4s !important;
+    top: -100vh;
+    
     border: 2px solid #5DE950;     
 }
 
 #landingContent {
-    position: absolute;
-    top: -5em;
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 button {
-    width: 10em;
+    width: 8em;
     height: 3em;
     margin: 0em 1.5em;
     
@@ -150,7 +111,7 @@ button:hover {
         transform: rotate(inherit);
     }
     to {
-        transform: translateX(200vw) translateY(200vh) rotate(2160deg);
+        transform: translateX(0vw) translateY(400vh) rotate(2160deg);
         
     }
 }
@@ -160,7 +121,7 @@ button:hover {
         transform: rotate(inherit);
     }
     to {
-        transform: translateX(200vw) translateY(200vh) rotate(1080deg);
+        transform: translateX(0vw) translateY(400vh) rotate(1080deg);
         
     }
 }
@@ -170,7 +131,7 @@ button:hover {
         transform: rotate(inherit);
     }
     to {
-        transform: translateX(200vw) translateY(200vh) rotate(540deg);
+        transform: translateX(0vw) translateY(400vh) rotate(540deg);
         
     }
 }
@@ -180,80 +141,32 @@ button:hover {
         transform: rotate(inherit);
     }
     to {
-        transform: translateX(200vw) translateY(200vh) rotate(360deg);
+        transform: translateX(0vw) translateY(400vh) rotate(360deg);
         
     }
 }
 
 #aboutMe {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(3, auto);
-    align-items: center;
     width: 100%;
     height: 100vh;   
 }
 
 
-#introText {
-    height: 5em;
-}
+
 
 h1 {
-    font-size: 5em;
+    font-size: 2.5em;
     margin-bottom: -0.2em;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
     height: 3em;
     margin-bottom: -1em;
 }
 
-#aboutMeContent1, #aboutMeContent2 {
-    width: 40em;
-    height: 20em;
-    background-color: #171717;
-}
 
-#aboutMeContainer {
-    grid-column-start: 4;
-    grid-column-end: 6;
-}
-#aboutMeContent1 {
-    
-    margin-top: 2em;
-    border-right: 5px solid #5DE950;
-    border-top: 5px solid #5DE950;
-    border-radius: 5px;
-}
 
-#aboutMeContent2 {
-    margin-top: 2em;
-    border-right: 5px solid #5DE950;
-    border-bottom: 5px solid #5DE950;
-    border-radius: 5px;
-}
-#nav1, #nav2 ,#nav3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-    z-index: 1;
-}
-
-#nav1{
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 5;
-    grid-column-end: 6;
-}
-#nav2{
-    grid-area: f;
-}
-#nav3{
-
-}
 
 #portraitImg {
     grid-row-start: 2;
@@ -280,3 +193,10 @@ h2 {
     font-size: 1em;
 }
 
+#buttonBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
