@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            // https://dashboard.emailjs.com/admin/integration
             emailjs.init('user_qDLoUv4Tzxw3vyWWMoswt');
         })();
     </script>
-    
+ <script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            this.contact_number.value = Math.random() * 100000 | 0;
+            emailjs.sendForm('service_uy3plw3', 'template_0ci8fvj', 'contact-form', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
     <link rel="stylesheet" href="styles.css">
     
     <title>Portfolio</title>
@@ -50,7 +72,7 @@
             </div>
     </div>
 </div>
-<div id="landingPage"> 
+<section id="landingPage"> 
     <div id="landingContent">
         <div class="container">     
             <p class="typing">Hi, my name is <span id="myName">Dave Jones</span>. I'm an aspiring dev from the UK.</p>
@@ -67,15 +89,16 @@
         <a href="#contactPage"><button>Contact</button></a>
     </div>
 </div>
-</div>
-<div id="aboutMe">
+</section>
+<section id="aboutMe">
     <div id="aboutMeFrame"></div>
-    <div class="aboutMeText right" id="aboutText1"><h3>WHO AM I?</h3><p class="about">I'm a mid 30's guy that decided to change my career. So I quit my job working in a freezer and decided that "I want to be a developer". Looking back I realise I had very little idea of what a developer does.<br> <br>
-    After bumbling my way through more than a few tutorials I was becoming frustrated with my progress, I felt like I was learning syntax but not problem solving. I read some advice that said words to the effect of "Build things and follow less tutorials". By now I had learned the basics of HTML and CSS and had been struggling with JavaScript for a while but thought I'd give it a go, so I built my house calculator. I knew it was basic but I was immensely proud of putting theory into practice.</p></div>
-    <div class="aboutMeText right" id="aboutText2"><h3>WHAT I'M DOING</h3><p class="about">I'm building things! What things?, I'm not entirely sure yet but it's my intention to maintain this page with things I've built until I reach my goals.</p></div>
+    <div class="aboutMeText right" id="aboutText1"><h3>WHO AM I?</h3><p class="about">I'm a guy in my mid 30's that decided to change my career during lockdown. I quit my job working in a freezer and began researching careers that one could self-teach. I enjoy problem solving and as a gamer, already spend loads of time on my PC so the path of becoming a developer was appealing. Looking back, I realise I had very little idea of what the scope of being a developer truly was.<br> <br>
+        After bumbling my way through more than a few tutorials, I was becoming frustrated with my progress - I felt like I was learning syntax but not doing much problem solving. I read some advice to the effect of "Build things and follow less tutorials". By that time, I had learned the basics of HTML and CSS and had been struggling with JavaScript for a while but thought I'd give it a go, so I built my house calculator. I knew it was basic but I was immensely proud of putting theory into practice. (edited)
+    </p></div>
+    <div class="aboutMeText right" id="aboutText2"><h3>WHAT I'M DOING</h3><p class="about">I'm building things! What things? I'm not entirely sure yet but I've been enjoying building tools to suit a variety of use cases in the meantime and it's my intention to maintain this page with things I've built either way.</p></div>
     <div class="aboutMeText botRight" id="aboutText3"><h3>WHERE I AIM TO BE</h3><p class="about">My goal right now is simple. To become employed as a developer. It is a large goal but one I will continue to pursue until I achieve it.</p></div>
-</div>
-<div id="projectPage">
+    </section>
+<section id="projectPage">
     <div class="projectBigBox"> 
         <div class="projectBox">
             <div class="projects topLeft"id="project1">  
@@ -106,25 +129,27 @@
             <div class="projectTextBox botRight"><p class="projectText"> A Flaq quiz game created using javaScript and CSS</p>
             </div> 
     </div>   
-</div>
-<div id="contactPage">
-    <form id="contact-form">
+</section>
+<section id="contactPage">
+    <form action="send" method="POST" id="contact-form">
         <input type="hidden" name="contact_number">
+        <div id="html_element"></div>
         
         <input  class="right" type="text" id="from_name" placeholder="NAME"name="from_name">
         
         <input class="right" type="email" id="reply_to"placeholder="YOUR EMAIL" name="reply_to">
         <label></label>
         <textarea class="botRight" id="message" placeholder="MESSAGE" name="message"></textarea>
-        <input class="" id="submit-button" type="submit" value="SEND">
+        <div class="g-recaptcha" data-sitekey="6LeMOtcdAAAAALcWS4moYiuszLf69T3KgAkNEnxr" data-callback="enableSubmit"></div>
+       
+        <br/>
+      <input type="submit" id="submit-button" value="Submit">
+       
     </form>
-
-    	
-
-</div>
-    </div>
-
+</section>
+    
+    
    <script src="app.js"></script> 
-</body>
+</body> 
 </html>
 

@@ -10,8 +10,12 @@ let k = 0;
 let p = 0;
 let squares = document.getElementsByClassName("squares")
 
+document.getElementById("submit-button").disabled = true;
 
-
+function enableSubmit() { 
+  let button = document.getElementById("submitbtn").disabled = false; 
+  button.style.color = "pink";
+}
 
 function myWriter() {
   for (let i = 0; i < typeWriterStrings.length; i++) {
@@ -68,17 +72,3 @@ function shapeLoader() {
   } 
 }
 
-window.onload = function() {
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      // generate a five digit number for the contact_number variable
-      this.contact_number.value = Math.random() * 100000 | 0;
-      // these IDs from the previous steps
-      emailjs.sendForm('service_uy3plw3', 'template_0ci8fvj', this)
-          .then(function() {
-              console.log('SUCCESS!');
-          }, function(error) {
-              console.log('FAILED...', error);
-          });
-  });
-}
