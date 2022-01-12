@@ -72,3 +72,9 @@ function shapeLoader() {
   } 
 }
 
+function formReset() {
+  console.log("clicked")
+  document.getElementById("contact-form").reset();
+}
+
+
