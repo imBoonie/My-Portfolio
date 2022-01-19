@@ -411,12 +411,9 @@ input {
     font-family: Consolas, monospace;
 }
 
-
-
 input[type="submit"] {
     color: inherit;
 }
-
 
 .projectText {
     font-size: 1em;
