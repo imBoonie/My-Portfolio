@@ -10,7 +10,7 @@ let k = 0;
 let p = 0;
 let squares = document.getElementsByClassName("squares")
 
-document.getElementById("submit-button").disabled = true;
+
 
 function enableSubmit() { 
   let button = document.getElementById("submitbtn").disabled = false; 

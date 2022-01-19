@@ -64,6 +64,7 @@
                     <a href="#aboutMe"><li>ABOUT</li></a>
                     <a href="#projectPage"><li>PROJECTS</li></a>
                     <a href="#contactPage"><li>CONTACT</li></a>
+                    <a href="/DavidJonesCVOnline.pdf" target="_blank"><li>CV</li></a>
                 </ul>
             </div>
     </div>
@@ -80,24 +81,31 @@
               </div>
         </div>
     <div id="buttonBox">
-        <a href="#aboutMe"><button>About</button></a>
-        <a href="#projectPage"><button>Projects</button></a>
-        <a href="#contactPage"><button>Contact</button></a>
+        <a href="#aboutMe"><button class="largeNavButtons">About</button></a>
+        <a href="#projectPage"><button class="largeNavButtons">Projects</button></a>
+        <a href="#contactPage"><button class="largeNavButtons">Contact</button></a>
     </div>
 </div>
 </section>
+
 <section id="aboutMe">
-    <div id="aboutMeFrame"></div>
+    <div id="framePlacement">
+        <div id="aboutMeFrame"></div>
+    </div>
+    <div id="textPlacement">
     <div class="aboutMeText right" id="aboutText1"><h3>WHO AM I?</h3><p class="about">I'm a guy in my mid 30's that decided to change my career during lockdown. I quit my job working in a freezer and began researching careers that one could self-teach. I enjoy problem solving and as a gamer, already spend loads of time on my PC so the path of becoming a developer was appealing. Looking back, I realise I had very little idea of what the scope of being a developer truly was.<br> <br>
-        After bumbling my way through more than a few tutorials, I was becoming frustrated with my progress - I felt like I was learning syntax but not doing much problem solving. I read some advice to the effect of "Build things and follow less tutorials". By that time, I had learned the basics of HTML and CSS and had been struggling with JavaScript for a while but thought I'd give it a go, so I built my house calculator. I knew it was basic but I was immensely proud of putting theory into practice. (edited)
+        After bumbling my way through more than a few tutorials, I was becoming frustrated with my progress - I felt like I was learning syntax but not doing much problem solving. I read some advice to the effect of "Build things and follow less tutorials". By that time, I had learned the basics of HTML and CSS and had been struggling with JavaScript for a while but thought I'd give it a go, so I built my house calculator. I knew it was basic but I was immensely proud of putting theory into practice.
     </p></div>
     <div class="aboutMeText right" id="aboutText2"><h3>WHAT I'M DOING</h3><p class="about">I'm building things! What things? I'm not entirely sure yet but I've been enjoying building tools to suit a variety of use cases in the meantime and it's my intention to maintain this page with things I've built either way.</p></div>
     <div class="aboutMeText botRight" id="aboutText3"><h3>WHERE I AIM TO BE</h3><p class="about">My goal right now is simple. To become employed as a developer. It is a large goal but one I will continue to pursue until I achieve it.</p></div>
-    </section>
+</div>    
+</section>
+
 <section id="projectPage">
     <div class="projectBigBox"> 
         <div class="projectBox">
             <div class="projects topLeft"id="project1">  
+                <img class="project-images" src="/images/housesmall.png" alt="House scoring image">
             </div>
                 <div class="smallButtonBox">
                     <div class="smallButton"><svg class="githubLogo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -107,12 +115,13 @@
                     <div class="smallButton">LIVE</div>
                 </div>
         </div>
-            <div class="projectTextBox topRight"><p class="projectText">A house scoring calculator that my Wife and I use to score possible future homes</p>
+            <div class="projectTextBox topRight"><p class="projectText">A house scoring calculator that my Wife and I used to score and find our new home</p>
             </div>
     </div>
     <div class="projectBigBox"> 
         <div class="projectBox">
-            <div class="projects botLeft"id="project2">  
+            <div class="projects botLeft"id="project2">
+                <img class="project-images" src="/images/flaggame.png" alt="Flag game image">  
             </div>
                 <div class="smallButtonBox">
                     <div class="smallButton"><svg class="githubLogo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -124,12 +133,13 @@
         </div>
             <div class="projectTextBox botRight"><p class="projectText"> A Flaq quiz game created using javaScript and CSS</p>
             </div> 
-    </div>   
+    </div>
+   
 </section>
 <section id="contactPage">
     <form action="?" method="POST" id="contact-form">
         <input type="hidden" name="contact_number">
-        <input class="right" type="text" name="user_name" placeholder="NAME">
+        <input class="right" type="text" name="from_name" placeholder="NAME">
         <input class="right" type="email" name="user_email" placeholder="EMAIL">
         <textarea class="botRight" id="messageBox" name="message" placeholder="MESSAGE"></textarea>
             <div class="g-recaptcha" data-sitekey="6LeMOtcdAAAAALcWS4moYiuszLf69T3KgAkNEnxr"></div>

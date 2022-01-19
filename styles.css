@@ -1,6 +1,8 @@
 body {
     background-color: #1f1f1f;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     padding: 0;
     color: #fff;
     box-sizing: border-box;
@@ -28,14 +30,11 @@ body {
 }
 
 .g-recaptcha {
-    transform:scale(0.77);
-    -webkit-transform:scale(0.77); 
+   width: 100%;
+   display: flex;
+   justify-content: center;
 }
 
-.recaptchaCenter {
-    text-align: center;
-    
-}
 
 .squares {
     position: absolute;
@@ -52,12 +51,11 @@ body {
 }
 
 #projectPage {
-    width:100%;
-    height:100vh;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 .projectLinks {
@@ -89,8 +87,10 @@ h3 {
 }
 
 .projects {
-    width: 10em;
-    height: 10em;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
     background-color: rgba(23, 23, 23, 0.8);
     border-radius: 5px;      
 }
@@ -142,6 +142,8 @@ h3 {
 }
 
 .projectBigBox {
+    max-width: 1200px;
+    margin-top: 5em;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -205,7 +207,7 @@ button:hover {
 }
 
 #aboutMe {
-    width: 100%;
+    margin:  1em auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -217,7 +219,8 @@ p {
 }
 
 .aboutMeText {    
-    width: 20em;
+    width: 90%;
+    height: 100%;
     background-color: rgba(23, 23, 23, 0.8);
     border-radius: 5px;
     display: flex;
@@ -320,6 +323,7 @@ li {
 }
 
 .typing {
+    max-width: 1200px;
   font-size: 2em;
   position: absolute;
   top: 20vh;
@@ -333,6 +337,7 @@ li {
 }
 
 .hiders {
+    max-width: 1200px;
     font-size: 2em;
   margin: 0;
   position: absolute;
@@ -366,6 +371,7 @@ li {
 }
 
 #contact-form {
+    max-width: 1000px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -416,4 +422,64 @@ input[type="submit"] {
     font-size: 1em;
     text-align: center;
     
+}
+
+.project-images {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+#framePlacement {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#textPlacement {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    .typing {
+        font-size: 4em;
+    }
+    .hiders {
+        font-size: 4em;
+    }
+    .largeNavButtons {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+    .about {
+        font-size: 1.5em;
+    }
+    .projectText {
+        font-size: 1.5em;
+        padding: 1em;
+    }
+    .smallButton {
+        font-size: 2em;
+    }
+
+    form {
+        font-size: 2em;
+    }
+}
+
+#divider {
+    margin: 5em auto;
+    height: 2px;
+    width: 80%;
+    border-radius: 50%;
+    background-color:#5de950;
+    text-decoration: none;
+    border: none;
 }
