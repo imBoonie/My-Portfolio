@@ -9,7 +9,9 @@ body {
     width: 100%;
     font-family: Consolas, monospace;
 }
-
+a {
+    text-decoration: none;
+}
 #navBar {
     width: 100%;
     display: flex;
